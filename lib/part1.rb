@@ -40,6 +40,19 @@ end
 
 def count_words(str)
   # YOUR CODE HERE
+  
+  hash = {}
+  words = str.split(/\W+/)
+  
+  words.each do |word|
+    if hash.key?(word.downcase)
+      hash[word.downcase] = hash[word.downcase] + 1
+    else
+      hash[word.downcase] = 1
+    end
+  end
+  return hash
+  
 end
 
 
@@ -74,6 +87,11 @@ end
 
 
 test_str = "The rent is due on the first day of the month unless the first day of the month falls on a Saturday or Sunday"
+
+word_count = count_words test_str
+puts word_count
+
+test_str = "dfg3 klkj kjl sdf"
 
 word_count = count_words test_str
 puts word_count
