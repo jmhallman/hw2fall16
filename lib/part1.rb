@@ -26,6 +26,16 @@
 
 def palindrome?(str)
   # YOUR CODE HERE
+  
+  str = str.downcase
+  str = str.gsub(/(\W|\d)/, '').strip
+  
+  if str.reverse == str
+    return true
+  else
+    return false
+  end
+  
 end
 
 def count_words(str)
@@ -47,6 +57,14 @@ end
 
 
 test_str = "Madam, I'm Adam"
+
+if palindrome? test_str
+  puts test_str + " is a palindrome!"
+else
+  puts test_str + " is NOT a palindrome!"
+end
+
+test_str = "ra--.ce6 c,.ar"
 
 if palindrome? test_str
   puts test_str + " is a palindrome!"
