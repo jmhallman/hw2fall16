@@ -9,11 +9,19 @@ def rps_game_winner(game)
   game[0][1] = game[0][1].upcase
   game[1][1] = game[1][1].upcase
   
-  if game[0][1] == "R" || game[0][1] == "P" || game[0][1] == "S"
+  if game[0][1].is_a? String
+    if game[0][1] == "R" || game[0][1] == "P" || game[0][1] == "S"
+      check1 = "pass"
+    end
+  else
     check1 = "pass"
   end
   
-  if game[1][1] == "R" || game[1][1] == "P" || game[1][1] == "S"
+  if game[1][1].is_a? String
+    if game[1][1] == "R" || game[1][1] == "P" || game[1][1] == "S"
+      check2 = "pass"
+    end
+  else
     check2 = "pass"
   end
   
@@ -89,7 +97,7 @@ end
 
 #feel free to add your own helper functions as needed
 
-tester = [["Joe", "p"], ["John", "S"]]
+tester = [["Joe", "r"], ["John", "S"]]
 
 game = rps_game_winner tester
 puts game
@@ -105,7 +113,7 @@ game = rps_game_winner(tester)
 puts game
 =end
 
-tournTest = [[[ ["Joe", "P"], ["Mary", "S"] ], [ ["Bob", "R"], ["Alice", "S"] ]], [[ ["Steve", "S"], ["Jane", "P"] ], [ ["Ted", "R"], ["Carol", "P"] ]]]
+tournTest = [[[ ["Joe", "P"], ["Mary", "S"] ],[ ["Bob", "R"], ["Alice", "S"] ]],[[ ["Steve", "S"], ["Jane", "P"] ],[ ["Ted", "R"], ["Carol", "P"] ]]]
 
 tourn = rps_tournament_winner tournTest
 puts tourn
