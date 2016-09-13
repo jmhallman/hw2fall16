@@ -26,6 +26,7 @@
 
 def palindrome?(str)
   # YOUR CODE HERE
+  #git test blank
   
   str = str.downcase
   str = str.gsub(/(\W|\d)/, '').strip
