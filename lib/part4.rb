@@ -21,19 +21,3 @@ class Class
     }
   end
 end
-
-
-class Foo 
- attr_accessor_with_history :lar
- attr_accessor_with_history :jar
-end
-f = Foo.new
-f.lar = 1
-f.lar = 2
-f.lar = 34
-f = Foo.new
-f.lar = 3
-varl = f.lar_history
-print varl
-varj= f.jar_history
-print varj

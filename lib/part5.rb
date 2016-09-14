@@ -15,10 +15,3 @@ class CartesianProduct
   end
 
 end
-
-
-c = CartesianProduct.new([:a,:b,:c], [4,5,7,8])
-c.each { |elt| puts elt.inspect }
-
-c = CartesianProduct.new([:a,:b], [])
-c.each { |elt| puts elt.inspect }

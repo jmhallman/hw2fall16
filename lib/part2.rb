@@ -26,21 +26,6 @@ def rps_game_winner(game)
   end
   
   raise NoSuchStrategyError unless check1 == "pass" and check2 == "pass"
-=begin  
-  if game[0][1] = "R"
-    game[0][1] = "Rock"
-  elsif game[0][1] = "P"
-    game[0][1] = "Paper"
-  elsif game[0][1] = "S"
-    game[0][1] = "Scissors"
-    
-  if game[1][1] = "R"
-    game[1][1] = "Rock"
-  elsif game[1][1] = "P"
-    game[1][1] = "Paper"
-  elsif game[1][1] = "S"
-    game[1][1] = "Scissors"
-=end
 
   
   if game[0][1] == "R" and game[1][1] == "P"
@@ -88,32 +73,10 @@ end
 def rps_tournament_winner(tournament)
   # YOUR CODE HERE
   
-  if tournament[0][0].is_a? String
+  if tournament[0][0].class ==  String
         return rps_game_winner(tournament)
   end
 
   return rps_game_winner([rps_tournament_winner(tournament[0]),rps_tournament_winner(tournament[1])])
 end
 
-#feel free to add your own helper functions as needed
-
-tester = [["Joe", "R"], ["John", "R"]]
-
-game = rps_game_winner tester
-puts game
-=begin
-tester = ["Joe", "p"]
-
-game = rps_game_winner(tester)
-puts game
-
-tester = ["Joe", "n"]
-
-game = rps_game_winner(tester)
-puts game
-=end
-
-tournTest = [[[ ["Joe", "P"], ["Mary", "S"] ],[ ["Bob", "R"], ["Alice", "S"] ]],[[ ["Steve", "S"], ["Jane", "P"] ],[ ["Ted", "R"], ["Carol", "P"] ]]]
-
-tourn = rps_tournament_winner tournTest
-puts tourn
