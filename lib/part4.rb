@@ -34,6 +34,6 @@ f.lar = 34
 f = Foo.new
 f.lar = 3
 varl = f.lar_history
-puts varl
+print varl
 varj= f.jar_history
-puts varj
+print varj

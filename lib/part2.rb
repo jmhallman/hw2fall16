@@ -44,39 +44,39 @@ def rps_game_winner(game)
 
   
   if game[0][1] == "R" and game[1][1] == "P"
-    game[1][1] = "Paper"
+    game[1][1] = "P"
     return game[1]
   end
   if game[0][1] == "R" and game[1][1] == "S"
-    game[0][1] = "Rock"
+    game[0][1] = "R"
     return game[0]
   end
   if game[0][1] == "R" and game[1][1] == "R"
-    game[0][1] = "Rock"
+    game[0][1] = "R"
     return game[0]
   end
   if game[0][1] == "P" and game[1][1] == "R"
-    game[0][1] = "Paper"
+    game[0][1] = "P"
     return game[0]
   end
   if game[0][1] == "P" and game[1][1] == "S"
-    game[1][1] = "Scissors"
+    game[1][1] = "S"
     return game[1]
   end
   if game[0][1] == "P" and game[1][1] == "P"
-    game[0][1] = "Paper"
+    game[0][1] = "P"
     return game[0]
   end
   if game[0][1] == "S" and game[1][1] == "R"
-    game[1][1] = "Rock"
+    game[1][1] = "R"
     return game[1]
   end
   if game[0][1] == "S" and game[1][1] == "P"
-    game[0][1] = "Scissors"
+    game[0][1] = "S"
     return game[0]
   end
   if game[0][1] == "S" and game[1][1] == "S"
-    game[0][1] = "Scissors"
+    game[0][1] = "S"
     return game[0]
   end
   
@@ -97,7 +97,7 @@ end
 
 #feel free to add your own helper functions as needed
 
-tester = [["Joe", "r"], ["John", "S"]]
+tester = [["Joe", "R"], ["John", "R"]]
 
 game = rps_game_winner tester
 puts game
