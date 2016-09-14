@@ -5,7 +5,7 @@ class Dessert
     @name = name
     @calories = calories
   end
-  
+
   def name
     @name
   end
@@ -21,16 +21,14 @@ class Dessert
   def calories=(new_calories)
     @calories = new_calories
   end
-  
+
   def healthy?
     # YOUR CODE HERE
-    
-    if calories < 200
+    if @calories < 200
       return true
     else
       return false
     end
-    
   end
   
   def delicious?
